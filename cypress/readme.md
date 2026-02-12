@@ -17,3 +17,4 @@
 chromeWebSecurity: false,
 
 # No arquivo de teste configurar: arrange, act (ações), assert (valida)
+## it.only realiza apenas o teste do it
