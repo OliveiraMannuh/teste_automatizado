@@ -19,6 +19,7 @@ describe('Login', () => {
 
         // Assert - Validação
             cy.get('[data-test="error"]').should('contain.text', 'Epic sadface: Username and password do not match any user in this service')
+            cy.url().should('eq', 'https://www.saucedemo.com/')
     })
 
 })
