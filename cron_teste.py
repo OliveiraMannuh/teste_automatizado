@@ -1,31 +1,4 @@
-#Logando e exportando relatórios Alunos por turma 2026
-
-import subprocess
-import pyautogui 
-import time
-import datetime
-# -*- coding: utf-8 -*-
-coding='UTF-8'
-
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-
-
-# Configurar Chrome em modo headless
-options = Options()
-options.add_argument('--headless')
-options.add_argument('--no-sandbox')
-options.add_argument('--disable-dev-shm-usage')
-options.add_argument('--disable-gpu')
-
-# Iniciar o Chrome
-#driver = webdriver.Chrome(options=options)
+#Arquivo para testar o cron, verificando se o script é executado no horário configurado.
 
 #Código para configurar CRON no linux para rodar o script diariamente às 14:20
 #Utilize o comando para configurar o horário e arquivo: crontab -e
@@ -58,3 +31,35 @@ options.add_argument('--disable-gpu')
 '''
 #Salvar o arquivo (Ctrl+O, Enter, Ctrl+X)
 #Verificar arquivo cron: crontab -l
+#Fim configuração CRON
+
+import subprocess
+import pyautogui 
+import time
+import datetime
+# -*- coding: utf-8 -*-
+coding='UTF-8'
+
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+
+servico = Service(ChromeDriverManager().install())
+
+options = webdriver.ChromeOptions()
+options.add_experimental_option("detach", True)
+
+pyautogui.PAUSE = 1  # Pausa de 1 segundo entre as ações do PyAutoGUI
+
+# Configurar o driver do Selenium (neste exemplo, usando o ChromeDriver)
+driver = webdriver.Chrome(service=servico, options=options)
+
+#maximizar navegador
+driver.maximize_window()
+
+# Abrir Google
+driver.get('https://google.com.nr')
