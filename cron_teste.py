@@ -31,6 +31,8 @@
 '''
 #Salvar o arquivo (Ctrl+O, Enter, Ctrl+X)
 #Verificar arquivo cron: crontab -l
+#Testar a execução: /home/manuela_oliveira/report.sh
+#Verificar o log para confirmar a execução: cat /home/manuela_oliveira/log_report.txt 
 #Fim configuração CRON
 
 import subprocess
