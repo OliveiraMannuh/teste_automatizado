@@ -15,6 +15,20 @@
 
 # Caso a aplicação tenha a visualização de conteúdo insegura, problemas no carregamento do network, configure para ignorar o erro, no arquivo cypress.config.js, abaixo de module exports:
 chromeWebSecurity: false,
+Conteúdo arquivo cypress.config.js: 
+const { defineConfig } = require("cypress");
+
+module.exports = defineConfig({
+  chromeWebSecurity: false,
+  allowCypressEnv: false,
+
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+  },
+});
+
 
 # No arquivo de teste configurar: arrange, act (ações), assert (valida)
 ## it.only realiza apenas o teste do it
