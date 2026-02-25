@@ -1,5 +1,4 @@
 # Iniciando projeto Cypress
-# Iniciando projeto Cypress
 
 ## Verifica se node está instalado: node -v
 ## Verifica se npm está instalado: npm -v

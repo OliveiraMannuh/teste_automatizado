@@ -2,6 +2,9 @@ import subprocess
 import pyautogui 
 import time
 # -*- coding: utf-8 -*-
+'''
+Código para votar automaticamente no site do BBB26
+'''
 
 for i in range(3):  # repete 10 vezes
     print(f'Repetição {i+1}')
