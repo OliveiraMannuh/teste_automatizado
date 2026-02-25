@@ -1,4 +1,5 @@
 # Iniciando projeto Cypress
+# Iniciando projeto Cypress
 
 ## Verifica se node está instalado: node -v
 ## Verifica se npm está instalado: npm -v
@@ -13,7 +14,7 @@
     "include": ["./node_modules/cypress", "./cypress/**/*.js"]
 }
 
-# Caso a aplicação tenha a visualização de conteúdo insegura, problemas no carregamento do network, configure para ignorar o erro, no arquivo cypress.config.js, abaixo de module exports:
+## Caso a aplicação tenha a visualização de conteúdo insegura, problemas no carregamento do network, configure para ignorar o erro, no arquivo cypress.config.js, abaixo de module exports:
 chromeWebSecurity: false,
 Conteúdo arquivo cypress.config.js: 
 const { defineConfig } = require("cypress");
